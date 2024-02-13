@@ -598,7 +598,7 @@ a{
     }
 }
 
-@media (min-width: 850px){
+@media  (width:800){
     .pie-pagina .grupo-1{
     width: 100%;
     max-width: 2000px;
@@ -659,6 +659,8 @@ a{
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 } 
+
+
 
 
 }
