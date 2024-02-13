@@ -461,6 +461,8 @@ a{
 
 
 
+
+
 @media (min-width: 850px){
     header{
         position: fixed;
@@ -596,7 +598,7 @@ a{
     }
 }
 
-@media  (width:800){
+@media (min-width: 850px){
     .pie-pagina .grupo-1{
     width: 100%;
     max-width: 2000px;
@@ -657,5 +659,6 @@ a{
 .pie-pagina .grupo-2 small{
     font-size: 15px;
 } 
+
 
 }
