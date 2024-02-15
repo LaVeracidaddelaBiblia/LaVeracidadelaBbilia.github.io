@@ -466,7 +466,7 @@ a{
 /**Escritorio**/
 
 
-@media (min-width: 400px){
+@media (min-width: 320px){
     header{
         position: fixed;
         width: 100%;
