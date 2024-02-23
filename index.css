@@ -103,7 +103,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/imagen\ principal.jpg");
+    ,url("media/imagen\ original\ principal.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -392,19 +392,20 @@ a{
 
   .wrapper .texto{
     text-align:left;
-    margin: 20px;
+    margin: 3%;
+    font-size: 180%;
 }
 .pie-pagina{
     width: 100%;
-    background-color: #ffffff;
 }
 .pie-pagina .grupo-1{
     width: 100%;
-    max-width: 2000px;
-    margin: auto;
-    display:grid;
-    grid-gap:40px;
-    padding: 45px 0px;
+        max-width: 2000px;
+        margin: auto;
+        display:grid;
+        grid-gap:40px;
+        padding: 45px 0px;
+        background-color: #ffffff;
 }
 .pie-pagina .grupo-1 .box figure{
     width: 88%;
@@ -429,13 +430,15 @@ a{
 
 .pie-pagina .grupo-1 .boxoren h2{
     color: #000000;
-    font-size: 20px;
+    font-size: 120%;
     margin: 20px;
 }
 
 .pie-pagina .grupo-1 .boxoren p{
     color: #000000;
     text-align: justify;
+    left: 100%;
+    right: 100%;
     margin: 20px;
     width: auto;
     height: auto;
@@ -463,96 +466,114 @@ a{
     font-size: 15px;
 } 
 
-/**Escritorio**/
-
-
-@media (min-width: 320px){
-    header{
-        position: fixed;
-        width: 100%;
-    }
-    header .container{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 20px;
-    }
-    .pie-pagina .grupo-1{
-        background-color: #00ff51;
-    }
-
-.pie-pagina .grupo-1 .box figure{
-    width: 85%;
-    height: 50%;
-    margin: 50px;
-    display: flex;
-    justify-content:end;
-    align-items:normal;
-}
-.pie-pagina .grupo-1 .box figure img{
-    width: 180px;
-}
-.pie-pagina .grupo-1 .box figure h2{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    width: 60%;
-    height: 100%;
-    font-size: 25px;
-    text-align:center;
-    color: #000000;
-}
-
-
-.pie-pagina .grupo-1 .boxoren h2{
-    color: #000000;
-    font-size: 20px;
-    margin: 20px;
-}
-
-.pie-pagina .grupo-1 .boxoren p{
-    color: #000000;
-    text-align: justify;
-    margin: 20px;
-    width: auto;
-    height: auto;
-}
-
-
-.pie-pagina .grupo-2{
-    background-color: #000000;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
-} 
-
-}
 
 /**Escritorio**/
 
-@media (min-width: 850px){
-    .wrapper .texto{
+@media (min-width: 800px){
+    .wrapper .icon{
+        margin: 0 50%;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+        position:relative;
+        z-index: 10;
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        padding-left: 100%;
+      }
+      .wrapper .icon span{
+        display: block;
+        height: 60px;
+        width: 60px;
+        background: #fff;
+        border-radius: 50%;
+        position:relative;
+        z-index: 2;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon span i{
+        line-height: 60px;
+        font-size: 25px;
+      }
+      .wrapper .icon .tooltip{
+        position:absolute;
+        top: 2%;
+        z-index: 1;
+        background: #fff;
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 200;
+        border-radius: 25px;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover .tooltip{
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .icon .tooltip:before{
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(45deg);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover span{
+        color: #fff;
+      }
+      .wrapper .icon:hover span,
+      .wrapper .icon:hover .tooltip{
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+      }
+      .wrapper .youtube:hover span,
+      .wrapper .youtube:hover .tooltip,
+      .wrapper .youtube:hover .tooltip:before{
+        background: #ff1100;
+      }
+      .wrapper .facebook:hover span,
+      .wrapper .facebook:hover .tooltip,
+      .wrapper .facebook:hover .tooltip:before{
+        background: #3B5999;
+      }
+      .wrapper .instagram:hover span,
+      .wrapper .instagram:hover .tooltip,
+      .wrapper .instagram:hover .tooltip:before{
+        background: #e1306c;
+      }
+      .wrapper .tiktok:hover span,
+      .wrapper .tiktok:hover .tooltip,
+      .wrapper .tiktok:hover .tooltip:before{
+        background: #333;
+      }
+    
+      .wrapper .texto{
         text-align:left;
+        padding-left: 90%;
+        margin: 2%;
+       
     }
-    .pie-pagina .grupo-1{
+    .pie-pagina .grupo-1{  
         width: 100%;
-        max-width: 2000px;
-        margin: auto;
+        max-width: 120%;
         display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap:40px;
-        padding: 45px 0px;
+        padding: 20px 20px;
         background-color: #ffffff;
+        grid-template-columns: repeat(auto-fit,minmax(22%,0fr));
     }
     .pie-pagina .grupo-1 .box figure{
-        width: 110%;
-        height: 100%;
-        margin: 10px;
+        width: 100%;
+        height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -564,19 +585,20 @@ a{
         font-family:Georgia, 'Times New Roman', Times, serif;
         width: 60%;
         height: 100%;
-        font-size: 25px;
+        font-size: 28px;
         text-align:center;
         color: #000000;
     }
     
     .pie-pagina .grupo-1 .boxoren h2{
         color: #000000;
-        font-size: 20px;
+        font-size: 100%;
     }
     
     .pie-pagina .grupo-1 .boxoren p{
-        color: #000000;
-        text-align: justify;
+        color: #000000; 
+        line-height: 40px;
+        width: 170%
     }
     .pie-pagina .grupo-1 .red-social a{
         display: inline-block;
