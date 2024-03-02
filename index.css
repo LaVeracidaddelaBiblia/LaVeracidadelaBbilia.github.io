@@ -468,7 +468,7 @@ a{
 
 
 /**Escritorio**/
-
+/**Desde los 800 pìxeles empiezan los cambios**/
 @media (min-width: 800px){
     .wrapper .icon{
         margin: 0 50%;
@@ -757,7 +757,9 @@ a{
     }
 }
 
-
+@media (max-width:500px){
+   
+}
 
 @media (min-width: 1200px) {
     #caracteristicas{
