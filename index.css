@@ -405,7 +405,7 @@ a{
         display:grid;
         grid-gap:40px;
         padding: 45px 0px;
-        background-color: #ffffff;
+        background-color: #68ef61;
 }
 .pie-pagina .grupo-1 .box figure{
     width: 88%;
@@ -568,7 +568,7 @@ a{
         max-width: 120%;
         display:grid;
         padding: 20px 20px;
-        background-color: #ffffff;
+        background-color: #ff00ff;
         grid-template-columns: repeat(auto-fit,minmax(22%,0fr));
     }
     .pie-pagina .grupo-1 .box figure{
